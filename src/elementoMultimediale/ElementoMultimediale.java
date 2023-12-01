@@ -10,4 +10,8 @@ public abstract class ElementoMultimediale {
     public String getTitolo() {
         return titolo;
     }
+    public void play() {
+        { System.out.println("Play è partita la canzone chiamata "+ getTitolo());
+        }
+    }
 }
