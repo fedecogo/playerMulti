@@ -11,7 +11,7 @@ public abstract class ElementoMultimediale {
         return titolo;
     }
     public void play() {
-        { System.out.println("Play è partita la canzone chiamata "+ getTitolo());
-        }
+        System.out.println("E' partito l'elemento"+ getTitolo());
+
     }
 }
