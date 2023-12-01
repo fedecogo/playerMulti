@@ -1,3 +1,5 @@
+package elementoMultimediale;
+
 public abstract class ElementoMultimediale {
     protected String titolo;
 
