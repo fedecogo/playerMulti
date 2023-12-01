@@ -4,8 +4,9 @@ import elementoMultimediale.ElementoMultimediale;
 import interfacee.Riproducibile;
 
 public class Video extends ElementoMultimediale implements Riproducibile {
-    // Classe per gestire gli elementi video. Eredita da elementoMultimediale.ElementoMultimediale e implementa le interfacce
-    // iproducibile e ImgRegolabile.impleemento i metodi per riprodurre il video, regolare il volume e la luminosità.
+    //video estende la classe ElementoMultimediale
+
+    //  ATTRIBUTI
 private  int volume;
 private  int durata;
 private  int luminosita;

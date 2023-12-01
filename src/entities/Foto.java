@@ -3,9 +3,9 @@ import elementoMultimediale.ElementoMultimediale;
 import interfacee.ImgRegola;
 
 public class Foto extends ElementoMultimediale implements ImgRegola {
-    // E inv questa è la classe per gestire gli elementi immagine. Eredita da elementoMultimediale.ElementoMultimediale e
-    // implementa l’interfaccia ImgRegolabile.Metodi per mostrare l’immagine e regolare la luminosità.
-  private int luminosita;
+   // foto estende la classe ElementoMultimediale imp ImgRegola
+
+     private int luminosita;
   public Foto(String titolo, int luminosita) {
     super(titolo);
     this.luminosita= luminosita;

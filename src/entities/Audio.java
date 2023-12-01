@@ -3,19 +3,23 @@ import elementoMultimediale.ElementoMultimediale;
 import interfacee.Riproducibile;
 
 public class Audio extends ElementoMultimediale implements Riproducibile {
+    //audio estende la classe ElementoMultimediale imp Riproducibile
 
     //ATTRIBUTI
     private int volume;
     private int durata;
 
 
+
+    //costruttore
     public Audio(String titolo, int volume, int durata) {
         super(titolo);
         this.volume = volume;
         this.durata = durata;
     }
 
-    //metodi
+
+    //vari metodi
     @Override
     public void play() {
       { System.out.println("Play è partita la canzone chiamata "+ getTitolo());

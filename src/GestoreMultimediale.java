@@ -11,7 +11,8 @@ public class GestoreMultimediale {
         Scanner scanner = new Scanner(System.in);
         ElementoMultimediale[] elementi = new ElementoMultimediale[5];
 
-        //Creazione dei 5 elementi
+
+        // Creazione dei 5 elementi
         for (int i = 0; i < 5; i++) {
             System.out.println("Vuoi creare un audio, un video o una foto?");
             String tipo = scanner.nextLine();
@@ -25,7 +26,9 @@ public class GestoreMultimediale {
                     System.out.println("Inserisci la durata:");
                     int durataAudio = scanner.nextInt();
                     scanner.nextLine();
+                    //nextLine diverso da nextInt
                     elementi[i] = new Audio(titolo, volumeAudio, durataAudio);
+                    //elemento nell array
                     break;
                 case "video":
                     System.out.println("Inserisci il volume:");
@@ -57,7 +60,11 @@ public class GestoreMultimediale {
             scelta = scanner.nextInt();
             if (scelta >= 1 && scelta <= 5) {
                 ElementoMultimediale elemento = elementi[scelta - 1];
-                elemento.play();
+                if (elemento instanceof Riproducibile) {
+                    elemento.play();
+                } else {
+                    System.out.println(elemento.toString());
+                }
 
                 System.out.println("Vuoi regolare il volume o la luminosità? (volume o luminosità)");
                 String regolazione = scanner.next();
@@ -89,13 +96,11 @@ public class GestoreMultimediale {
                         }
                         break;
                     default:
-                        System.out.println("Regolazione non riconosciuta. Riprova.");
+                        System.out.println("Regolazione non trovata.");
                         break;
                 }
             }
         } while (scelta != 0);
 
-        scanner.close();
     }
 }
-

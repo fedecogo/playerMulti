@@ -12,6 +12,9 @@ public abstract class ElementoMultimediale {
     }
     public void play() {
         System.out.println("E' partito l'elemento"+ getTitolo());
-
     }
+    public void stop(){
+        System.out.println("Stoppato l'elemento"+ getTitolo());
+    }
+
 }
