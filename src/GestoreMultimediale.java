@@ -86,10 +86,13 @@ public class GestoreMultimediale {
                         if (elemento instanceof Foto) {
                             System.out.println("Vuoi aumentare o diminuire la luminosità? (aumenta o diminuisci)");
                             String azione = scanner.next();
-                            if (azione.equalsIgnoreCase("aumenta")) {
+                            if (azione.equalsIgnoreCase("alza")) {
                                 ((Foto) elemento).aumentaLuminosita();
+                                System.out.println("Volume aumentato");
+
                             } else if (azione.equalsIgnoreCase("diminuisci")) {
                                 ((Foto) elemento).diminuisciLuminosita();
+                                System.out.println("Volume diminuito");
                             }
                         } else {
                             System.out.println("Questo elemento non ha una luminosità da regolare.");
